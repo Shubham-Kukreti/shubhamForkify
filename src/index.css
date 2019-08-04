@@ -1,0 +1,746 @@
+html{
+  margin:0;
+  padding:0;
+}
+body {
+  margin: 0;
+  padding:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to right,yellow,#fb4)
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#header{
+  height:4.5rem;
+  background-color: orange;
+  width:100%;
+  display:grid;
+  grid-template-columns: 20% 50% 2% 17% 3% 8%;
+}
+
+
+#footer{
+  height:4.7rem;
+  background-color: orange;
+  width:100%;
+  display:grid;
+  margin:0;
+  grid-template-columns: 45% 55% 
+}
+#heart{
+  height: 2rem;
+  width:2rem;
+  margin:auto;
+  cursor:pointer;
+  transition:0.25s;
+}
+#heart2{
+  display:none;
+}
+
+#heart:hover{
+  height:2.5rem;
+  width:2.5rem;
+}
+
+#H_title{
+  font-weight:bold;
+  color:white;
+  font-size:1.8rem;
+  text-align:center;
+  margin:auto;
+  font-family: cursive;
+}
+
+#F_title{
+  font-weight:bold;
+  color:white;
+  font-size:1.8rem;
+  text-align:center;
+  margin:auto;
+  position:relative;
+  top:-0.8rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+#imgS{
+  height: 2rem;
+  width:2rem;
+  cursor: pointer;
+  margin-left:0px;
+  justify-self: left;
+  border:0.13rem rgb(220, 248, 214) solid;
+  margin:auto;
+  justify-self: left;
+  border-left:none;
+  border-radius: 1px;
+}
+
+#searchBar{
+height:2rem;
+margin:auto;
+margin-right: 0px;
+border-right-color: #f5f5f5;
+border-radius:2px;
+text-align:center;
+width:100%;
+}
+
+#login-signup{
+  height:2.5rem;
+  margin:auto;
+  border-radius:2rem;
+  width:8rem;
+  transition:0.25s;
+}
+
+#lTable{
+  height:20vh;
+}
+
+#login-signup:hover{
+  height:2.9rem;
+  width:9.5rem;
+}
+
+#listContainer{
+  width:100%;
+  background-color: #f5f5f5;
+  border:2px solid #E04A72;
+  border-right:none;
+  height:100vh;
+}
+
+.items{
+  display:grid;
+  grid-template-columns: 20% 80%;
+  margin:0.5rem;
+}
+
+#recipeimg{
+  height:3rem;
+  width:3rem;
+  border-radius: 50%;
+  margin:auto;
+}
+
+#itemlist{
+  list-style-type:none;
+
+}
+
+#recipeI{
+  cursor: pointer;
+}
+#recipeImg{
+  height:100%;
+  width:85%;
+  border:4px solid #EE3145;
+  border-radius:2.5rem;
+  margin:auto;
+  
+  }
+#root{
+  margin:0;
+  padding:0;
+  background-color: white;  
+}
+
+#app_container{
+  margin:0;
+  padding:0;
+}
+
+#navg{
+  display:grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  font-weight: bold;
+  color:red;
+  cursor:pointer;
+}
+
+#middle{
+  display:grid;
+  grid-template-rows: 10% 40% 50%;
+  background: linear-gradient(to bottom,#FF9933,#f69);
+  margin:0;
+  border: 0.2rem solid #E04A72;
+  width:100%;
+  height:100vh;
+  text-align: center;
+  overflow-y:scroll;
+
+  
+}
+#show{
+  display:grid;
+  grid-template-columns: 30% 70%;
+  width:100%;
+  margin:0;
+}
+
+#first{
+  height:80%;
+  width:100%;
+  margin-top:0;
+  
+}
+
+#second{
+  margin:auto;
+  margin-top:0;
+  display:grid;
+  grid-template-columns: auto auto;
+  width:90%; 
+  height: 65%;
+}
+
+#ing{
+  height: 100%;
+  padding-right: 0.7rem;
+}
+#prep{
+  padding-left:0.7rem;
+  width:90%;
+  height:100%;
+}
+
+#recipeTitle{
+  text-align: center;
+  color:white;
+  font-weight: bolder;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin:auto;
+}
+
+#shopping{
+  display:none;
+  background: linear-gradient(to top,#ee3,#f82);
+  margin:0;
+  border:0.2rem solid #E04A72;
+  border-left:none;
+}
+
+#listFav{
+  cursor:pointer;
+}
+#Text h6,#Text h4{
+  font-weight:bold;
+  color:blue;
+  text-align: center;
+
+}
+
+#dyna{
+  background: linear-gradient(to right,#0f8,#0f0);
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  position: fixed;
+  display: none;
+  left: 37%;
+  top:13%;
+  position:absolute;
+  height:55vh;
+  width:30vw;
+  transition:1s;
+}
+
+#logoutBox{
+  display:none;
+  height:3rem;
+  width:10rem;
+  position:fixed;
+  background-color: white;
+  top:3rem;
+  left:80%;
+}
+
+#Blogout{
+  height:100%;
+  width: 100%;
+}
+
+input[type="text"],input[type="password"],input[type="email"]{
+  border-radius: 1.5rem;;
+  border:2px solid rgb(220, 248, 214);
+  width:9rem;
+  transition:0.25s;
+  text-align: center;
+}
+
+
+input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover{
+  width:11rem;
+}
+
+
+input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus{
+   width:11rem;
+}
+
+button[type="submit"],button[type="reset"]{
+  border-radius:2rem;
+  width:7rem;
+  height:2.5rem;
+  transition:0.25s;
+}
+
+#bSignup,#bLogin,#BLogin,#sButton{
+  border-radius:2rem;
+  width:7rem;
+  height:2.5rem;
+  transition:0.25s;
+}
+
+
+#bSignup:hover,#bLogin:hover,#BLogin:hover,button[type="submit"]:hover,button[type="reset"]:hover,#sButton:hover{
+  width:8.5rem;
+  height:3rem;
+}
+
+
+#transparentBack{
+  height:100vh;
+  width:100vw;
+  background-color: white;
+  opacity:0.5;
+  position:fixed;
+  display:none;
+}
+
+.loginSup{
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:red;
+  margin-bottom: 1rem;
+}
+#login_table{
+  height:100%;
+}
+
+td{
+  margin:0.5rem;
+  text-align: center;
+  
+}
+
+#pSignup{
+  display:block;
+  transition:display 2s linear 1s;
+}
+#pLogin{
+  display:block;
+  transition:display 2s linear 1s;
+}
+.aSignUp{
+  cursor:pointer;
+  color:blue;
+}
+
+.shoppingHead{
+  color:rgb(253, 76, 6);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+#favList{
+  color:red;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.image{
+  height:1.5rem;
+  width:1.5rem;
+  position:relative;
+  top:-1rem;
+  left:1.5rem;
+  margin:3px;
+  transition:height 0.2s linear;
+  transition:width 0.2s linear;
+  cursor: pointer;
+
+}
+
+.image:hover{
+  height:1.8rem;
+  width:1.8rem;
+}
+
+#conText{
+  color:white;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+label{
+  color:#6600FF;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+  width:10rem;
+  text-align: center;
+}
+
+#welcomeText{
+  color:white;
+  margin:auto;
+  margin-right: 3px;
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+#downArrow{
+  height:0.8rem;
+  width:0.8rem;
+  margin:auto;
+  margin-left: 2px;
+}
+
+#showRecipe{
+  display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#favCross{
+  display:none;
+}
+
+.CrossLS{
+  height:2rem;
+  width:2rem;
+  cursor:pointer;
+  float:right;
+}
+
+#menu{
+  display:none;
+}
+
+#menuBar{
+  display:none;
+}
+#CrossShow{
+  display: none;
+}
+
+
+@media(max-width:451px){
+  
+  #footer{
+    width:100vw;
+    height:3.5rem;
+  }
+  #show{
+    display: grid;
+    grid-template-columns: 100% 0% 0%;
+  }
+  
+  #welcomeText{
+    display:none;
+  
+  }
+
+  #downArrow{
+    display:none;
+  }
+  
+  #heart{
+    display:none;
+
+  }
+
+  li{
+    width:90%;
+  }
+  #searchBar{
+  display:none;
+}
+#login-signup{
+  display:none;
+}
+#imgS{
+  display:none;
+}
+
+#header{
+  height:3.5rem;
+  grid-template-columns: 80% 10% 10%;
+  width:100vw;
+}
+#heart2{
+  display:block;
+  height: 1.5rem;
+  width:1.5rem;
+  margin:auto;
+  cursor:pointer;
+  transition:0.25s;
+
+}
+#menu{
+  display:block;
+  height:1.5rem;
+  width:1.5rem;
+  margin:auto;
+  cursor: pointer;
+
+}
+#menuBar{
+  display: none;
+  position: fixed;
+  left:0;
+  top:3.5rem;
+  z-index:2;
+  height: 55vh;
+  width: 100vw;
+  margin:0px;
+  border:2px solid black;
+  background: linear-gradient(to top,#e1eec3,#f05053)
+}
+
+tr{
+  width: 80vw;
+  height:2.5rem;
+}
+
+td{
+  width:35vw;
+}
+/* input[type="text"],input[type="password"],input[type="email"]{
+  width:7rem;
+} */
+
+#loginMenu,#rList{
+  width:100%;
+ 
+}
+
+/* input[type="text"]{
+  border-radius:0;
+  width:100%;
+  height:2rem;
+} */
+input[type="text"],input[type="password"],input[type="email"]{
+  border-radius: 0.5rem;;
+  border:2px solid rgb(220, 248, 214);
+  width:7rem;
+  transition:0.25s;
+  text-align: center;
+}
+
+#menuSearch{
+  width:100%;
+  border-radius: 0;
+}
+
+
+input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover{
+  width:7rem;
+  border-radius:0;
+  width:100%;
+  height:2rem;
+}
+
+
+input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus{
+   width:7rem;
+}
+
+
+button[type="submit"],button[type="reset"]{
+  border-radius:1rem;
+  width:6rem;
+  height:2.2rem;
+  transition:0.25s;
+}
+
+#bSignup,#bLogin,#BLogin,#sButton{
+  border-radius:1rem;
+  width:6rem;
+  height:2.2rem;
+  transition:0.25s;
+}
+
+
+#bSignup:hover,#bLogin:hover,#BLogin:hover,button[type="submit"]:hover,button[type="reset"]:hover,#sButton:hover{
+  width:6rem;
+  height:2.2rem;
+}
+
+
+#H_title{
+  margin-left:6px;
+  justify-self: left;
+}
+
+#middle{
+  height:101.7vh;
+  width:100vw;
+  /* overflow-y:scroll; */
+  grid-template-rows: 10% 15% 75%;
+  display:none;
+
+}
+
+#CrossShow{
+  height:1.rem;
+  width:1.5rem;
+}
+
+#showRecipe{
+  display:block;
+  width:100%;
+}
+
+ #first{
+  margin-top:1rem;
+  height:30vh;
+}
+
+#second{
+  margin:auto;
+  margin-top:0;
+  display:none;
+}
+
+#navg{
+  font-size: 0.8rem;
+}
+#listContainer{
+  border-right:2px solid #E04A72;
+  height:102vh;
+  width:100vw;
+  overflow-y: scroll;
+}
+#recipeI{
+  font-size:0.9rem;
+}
+
+#recipeimg{
+  height:2.2rem;
+  width:2.2rem;
+  margin-right:1.4rem;
+  margin-top:0;
+
+}
+
+#shopping{
+  height:100vh;
+  width:100vw;
+  position:fixed;
+  right:0px;
+  border-left:0.2rem solid #E04A72
+}
+
+#favCross
+{ display:block;
+  height:2rem;
+  width:2rem;
+}
+#recipeTitle{
+  font-size: 1.3rem;
+}
+#recipeImg{
+  height:70%;
+  width: 70%;
+  border-radius:20%;
+  margin:auto;
+  margin-top:auto;
+}
+
+#recipeTitle{
+  font-size:1.4rem;
+}
+/* 
+#itemlist{
+  list-style-type: circle;
+} */
+
+
+#cross{
+  height:1.5rem;
+  width:1.5rem;
+  position:absolute;
+  left:0px;
+  top:0px;
+  background: red;
+  display:none;
+} 
+
+#dyna{
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  left: 0px;
+  border-radius:0;  
+}
+
+
+.CrossLS{
+  height:2rem;
+  width:2rem;
+}
+
+#loginMenu{
+
+  transition:0.25s;
+}
+#loginMenu:hover{
+  color:blue;
+  text-decoration: underline;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+#sButton{
+  height:3rem;
+  width:6.5rem;
+  transition:none;
+}
+
+}
