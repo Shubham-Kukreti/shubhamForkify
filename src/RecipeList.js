@@ -48,8 +48,8 @@ constructor(){
             }
          document.getElementById("itemlist").insertAdjacentHTML('beforeend',` 
          <div id="navg">
-         <p id="previous"> <<< Prev</p>
-         <p id="next">Next >>> </p> 
+         <button type="button" id="previous" class="btn btn-primary listButton">Prev</button>
+         <button type="button" id="next" class="btn btn-primary listButton">Next</button> 
          </div>`
          )     
                   
@@ -88,8 +88,8 @@ constructor(){
              }
           document.getElementById("itemlist").insertAdjacentHTML('beforeend',` 
           <div id="navg">
-          <p id="previous"> <<< Prev</p>
-          <p id="next">Next >>> </p> 
+          <button type="button" class="btn btn-primary listButton" id="previous">Prev</button>
+          <button type="button" id="next" class="btn btn-primary listButton">Next</button> 
           </div>`
           )
     }    

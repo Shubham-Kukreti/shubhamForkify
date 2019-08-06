@@ -104,6 +104,7 @@ document.addEventListener("click",(e)=>{
       else if(j==1){
         document.getElementById("menuBar").style.display="none";
         document.getElementById("listContainer").style.display="block"
+        document.getElementById("middle").style.display="none";
         j--
       }
     
@@ -118,7 +119,7 @@ document.addEventListener("click",(e)=>{
     ReactDOM.render(<Login />,document.getElementById("dyna"))
     document.getElementById("dyna").style.display="block"
     document.getElementById("menuBar").style.display="none"
-    j--;
+    j=0;
   } 
   
   else if(e.target.className=="CrossLS"){
@@ -128,7 +129,7 @@ document.addEventListener("click",(e)=>{
   else if(e.target.id=="heart2"){
     document.getElementById("shopping").style.display="block"
     document.getElementById("menuBar").style.display="none"
-    j--
+    j=0;
 
   }
   else if(e.target.id=="favCross"){
@@ -140,14 +141,16 @@ document.addEventListener("click",(e)=>{
     document.getElementById("show").style.gridTemplateColumns = "100% 0%";
     document.getElementById("listContainer").style="block";
     document.getElementById("middle").style.display = "none";
-    j--
+    j=0
    
   }
  else if(e.target.id=="recipeI" && window.outerWidth<450){
    document.getElementById("listContainer").display="none";
    document.getElementById("show").style.gridTemplateColumns = "0% 100%";
    document.getElementById("middle").style.display = "block";
+   document.getElementById("second").style.display="none";
    document.getElementById("CrossShow").style.display="block"
+   document.getElementById("showRecipe").style.display="block";
 
  }
  else if(e.target.id=="showRecipe" && window.outerWidth<450){
