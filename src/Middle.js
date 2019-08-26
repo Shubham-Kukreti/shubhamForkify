@@ -22,7 +22,7 @@ class Middle extends Component{
   document.getElementById("recipeTitle").innerHTML=recipeName;
 
   var contentJson=JSON.parse(localStorage.getItem('content'));
-
+    
  for(var i=0;;i++){
    if(contentJson.data.recipes[i].title==recipeName){  
     document.getElementById("first").insertAdjacentHTML("beforeend",`

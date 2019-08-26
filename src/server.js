@@ -8,7 +8,7 @@ let mongoClient=require('mongodb').MongoClient;
 
 var io=socketIO(server);
 
-
+var mdkey="mongodb+srv://shubham2:shubham98@cluster0-jlphs.mongodb.net/test?retryWrites=true&w=majority";
 
 //mongo connectivity
 var mongoUrl= "mongodb://localhost:27017/"
@@ -525,9 +525,9 @@ const myKey="forkify"
 //      }
 
 app.post('/login',(req,res)=>{
-     mongoClient.connect(mongoUrl,(err,db)=>{
+     mongoClient.connect(mdkey,(err,db)=>{
           if(err) throw err;
-          var dbo=db.db('Forkify');
+          var dbo=db.db('forkify');
           dbo.collection('User').findOne({Email:req.body.userEmail,Password:req.body.userPassword},(err,result)=>{
               
                if(err) throw err;  
@@ -561,9 +561,9 @@ app.post('/verifyToken',(req,res)=>{
 
 app.post('/signup',(req,res)=>{
      
-     mongoClient.connect(mongoUrl,(err,db)=>{
+     mongoClient.connect(mdkey,(err,db)=>{
           if(err) throw err;
-          var dbo=db.db('Forkify');
+          var dbo=db.db('forkify');
           dbo.collection('User').findOne({Email:req.body.email},(err,result)=>{
                
                if(err) throw err;
@@ -589,21 +589,23 @@ app.post('/signup',(req,res)=>{
 
 })
 
-// mongoClient.connect(mongoUrl,(err,db)=>{
+// mongoClient.connect(mdkey,(err,db)=>{
 //      if(err) throw err;
-//      var dbo=db.db('Forkify');
-//      dbo.collection('content').insertOne({Recipe:recipeData},(err,result)=>{
+//      var dbo=db.db('forkify');
+//      dbo.collection('content').insertOne({'recipe':recipeData},(err,result)=>{
 //           if(err) throw err;
 //      })
 // })
 
 app.post('/sendData',(req,res)=>{
-     mongoClient.connect(mongoUrl,(err,db)=>{
+    // console.log("asdads")
+     mongoClient.connect(mdkey,(err,db)=>{
                if(err) throw err;
-               var dbo=db.db('Forkify');
+               var dbo=db.db('forkify');
                dbo.collection('content').findOne({},(err,result)=>{
                     if(err) throw err;
-                    res.send(result.Recipe[req.body.rname])
+                    console.log(result)
+                    res.send(result.recipe[req.body.rname])
                })
           })
           

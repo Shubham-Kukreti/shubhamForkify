@@ -33,7 +33,7 @@ class Header extends Component{
   componentDidMount(){
     this.verify()
   }
-  
+
   render(){
   
     Push.create("Forkify",{body:"Welcome to Forkify",timeout:4000,icon:require('./Images/fork.png')}); 
