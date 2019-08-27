@@ -11,6 +11,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 var i=0
 var j=0
 var k=0
+var l=0
 document.addEventListener("click",(e)=>{
   //alert(e.target.textContent);
   var docWidth = document.documentElement.offsetWidth;
@@ -84,6 +85,7 @@ document.addEventListener("click",(e)=>{
       localStorage.removeItem('userName');
       document.getElementById("loginMenu").innerHTML=`LogIn`;
       document.getElementById("menuLogOut").style.display="none;"
+      j=0;
       window.location.reload()
     }
 
@@ -100,11 +102,13 @@ document.addEventListener("click",(e)=>{
           document.getElementById("showRecipe").style.display="none";
           
           if(localStorage.getItem('token')!=undefined){
-            document.getElementById("loginMenu").innerHTML="";
             document.getElementById("loginMenu").innerHTML=`Welcome ${localStorage.getItem('userName')}`;
+            if(l==0){
             document.getElementById("loginMenu").insertAdjacentHTML("afterend",`
             <button id="menuLogOut" type="button">LogOut</button>
             `)
+            l++;
+            }
           }
 
           j++;
