@@ -1,5 +1,20 @@
 const express  = require('express');
 const app = express();
+
+app.enable('trust proxy');
+app.use((req,res,next)=>{
+     if(req.protocol=='https'){
+          next();
+     }else{
+          res.redirect('https://${req.hostname}');
+     }
+})
+
+const path=require('path');
+
+app.use(express.static(path.join(__dirname,"../build")));
+
+
 const server  = require('http').createServer(app);
 const socketIO=require('socket.io');
 let bodyParser = require('body-parser');
@@ -28,7 +43,11 @@ app.use(bodyParser.json({limit: '50mb',extended: true}))
 
 // let user=['Shubham']
 // let password=['12345678']
-// const myKey="forkify"
+ const myKey="forkify"
+
+ app.get("/",(req,res,next)=>{
+      res.sendFile(path.join(__dirname,"../build","index.html"));
+ })
 
 
 // let recipeData={
@@ -623,6 +642,10 @@ app.post('/sendData',(req,res)=>{
 // });
 
 // io.emit('newCustomer',"Lisen to Me");
+
+app.use((req,res=>{
+     res.send("404,not found");
+}))
 
 server.listen(process.env.PORT,(req,res)=>{
     console.log("server is listening to port number 5000")
