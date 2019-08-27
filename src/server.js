@@ -643,9 +643,9 @@ app.post('/sendData',(req,res)=>{
 
 // io.emit('newCustomer',"Lisen to Me");
 
-app.use((req,res=>{
+app.use((req,res)=>{
      res.send("404,not found");
-}))
+})
 
 server.listen(process.env.PORT,(req,res)=>{
     console.log("server is listening to port number 5000")
