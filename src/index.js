@@ -65,7 +65,7 @@ document.addEventListener("click",(e)=>{
      var uname=document.getElementById("uName").value;
      var upass=document.getElementById("uPass").value;
      var umail=document.getElementById("uEmail").value;
-     axios.post('http://localhost:8080/http://localhost:5000/login',{'userName':uname,'userPassword':upass,'userEmail':umail})
+     axios.post('/login',{'userName':uname,'userPassword':upass,'userEmail':umail})
      .then((result)=>{
       console.log(result)
       if(result.data.token=='invalid'){

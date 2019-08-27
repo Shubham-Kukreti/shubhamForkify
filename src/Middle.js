@@ -33,7 +33,7 @@ class Middle extends Component{
 
 
   
-  axios.post('http://localhost:8080/http://localhost:5000/sendData',{'rname':recipeName})
+  axios.post('/sendData',{'rname':recipeName})
    .then((result)=>{
 
    document.getElementById('ing').innerHTML="";

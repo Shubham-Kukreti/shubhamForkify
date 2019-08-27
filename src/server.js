@@ -8,12 +8,15 @@ let mongoClient=require('mongodb').MongoClient;
 
 var io=socketIO(server);
 
+
 var mdkey="mongodb+srv://shubham2:shubham98@cluster0-jlphs.mongodb.net/test?retryWrites=true&w=majority";
 
 //mongo connectivity
+
 var mongoUrl= "mongodb://localhost:27017/"
 
 app.use(bodyParser.urlencoded({extended: true,limit: '50mb'}))
+
 app.use(bodyParser.json({limit: '50mb',extended: true}))
 
 //mongo DB functions
@@ -23,9 +26,10 @@ app.use(bodyParser.json({limit: '50mb',extended: true}))
 // deleteOne
 
 
-let user=['Shubham']
-let password=['12345678']
-const myKey="forkify"
+// let user=['Shubham']
+// let password=['12345678']
+// const myKey="forkify"
+
 
 // let recipeData={
 //      'Jalapeno Popper Grilled Cheese Sandwich':{
@@ -620,7 +624,7 @@ app.post('/sendData',(req,res)=>{
 
 // io.emit('newCustomer',"Lisen to Me");
 
-server.listen(5000,(req,res)=>{
+server.listen(process.env.PORT,(req,res)=>{
     console.log("server is listening to port number 5000")
   })
   

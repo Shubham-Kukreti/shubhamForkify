@@ -19,7 +19,7 @@ constructor(){
         window.location.reload()
     }
     else{
-        axios.post('http://localhost:8080/http://localhost:5000/signup',{'firstN':fName,'lastN':lName,'email':mailE,'passwordS':pass,'CpasswordS':cpassW})
+        axios.post('/signup',{'firstN':fName,'lastN':lName,'email':mailE,'passwordS':pass,'CpasswordS':cpassW})
         .then((res)=>{
             if(res.data.value=="already"){
                 alert("You have already registered")
