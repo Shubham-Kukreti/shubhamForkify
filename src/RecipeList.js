@@ -81,7 +81,7 @@ constructor(){
                      document.getElementById("itemlist").insertAdjacentHTML('beforeend',`
                      <li class="items">
                      <img id="recipeimg" src="${result.data.recipes[i].image_url}"/>
-                     class="recipesIdentity" id="recipeI">${result.data.recipes[i].title}
+                     <p class="recipesIdentity" id="recipeI">${result.data.recipes[i].title}</p>
                      </li>
                      `);
                  }
