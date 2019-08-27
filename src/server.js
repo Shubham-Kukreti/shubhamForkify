@@ -647,7 +647,7 @@ app.use((req,res)=>{
      res.send("404,not found");
 })
 
-server.listen(process.env.PORT,(req,res)=>{
+server.listen(process.env.PORT||5000,(req,res)=>{
     console.log("server is listening to port number 5000")
   })
   

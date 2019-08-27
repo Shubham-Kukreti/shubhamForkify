@@ -8,14 +8,9 @@ class Middle extends Component{
     super()
     
  document.addEventListener("click",(e)=>{
-   if(localStorage.getItem('token')!=undefined){
-     document.getElementById("loginMenu").innerHTML=`Welcome ${localStorage.getItem('userName')}`;
-     document.getElementById("loginMenu").insertAdjacentHTML("afterend",`
-     <button id="menuLogOut" type="button">LogOut</button>
-     `)
-    }
+   
  
-  else if(e.target.className=="recipesIdentity" ) {
+  if(e.target.className=="recipesIdentity" ) {
 
   document.getElementById("first").innerHTML=""
   var recipeName=e.target.textContent
