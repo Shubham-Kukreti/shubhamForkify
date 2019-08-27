@@ -82,7 +82,7 @@ class Middle extends Component{
 
           <button type="button" id="loginMenu">Login</button> 
           
-          {/* <button type="button" id="favMenu">My Fav List</button>         */}
+          {/* <button type="button" id="favMenu">My Fav List</button> */}
           <button type="button" id="rList">Recipes List</button> 
         </div>
       </div>

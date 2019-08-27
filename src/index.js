@@ -98,7 +98,17 @@ document.addEventListener("click",(e)=>{
           document.getElementById("middle").style.display="block"
           document.getElementById("CrossShow").style.display="none";
           document.getElementById("showRecipe").style.display="none";
+          
+          if(localStorage.getItem('token')!=undefined){
+            document.getElementById("loginMenu").innerHTML="";
+            document.getElementById("loginMenu").innerHTML=`Welcome ${localStorage.getItem('userName')}`;
+            document.getElementById("loginMenu").insertAdjacentHTML("afterend",`
+            <button id="menuLogOut" type="button">LogOut</button>
+            `)
+          }
+
           j++;
+
           // document.getElementById("menuBar").style.display="block"
      }
       else if(j==1){
@@ -122,16 +132,7 @@ document.addEventListener("click",(e)=>{
     j=0;
   } 
   
-   else if(e.target.id=="menu"){
-    if(localStorage.getItem('token')!=undefined && window.outerWidth<450){
-      document.getElementById("loginMenu").innerHTML="";
-      document.getElementById("loginMenu").innerHTML=`Welcome ${localStorage.getItem('userName')}`;
-      document.getElementById("loginMenu").insertAdjacentHTML("afterend",`
-      <button id="menuLogOut" type="button">LogOut</button>
-      `)
-    
-   }
-  }
+  
 
   else if(e.target.className=="CrossLS"){
     document.getElementById("dyna").style.display="none"
